@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: assassinate72-hasura
+  data: null
+  kubeContext: assassinate72
+  name: assassinate72
