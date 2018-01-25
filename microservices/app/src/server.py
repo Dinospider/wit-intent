@@ -1,5 +1,5 @@
 from src import app
-from flask import jsonify, request
+from flask import jsonify, request, render_template
 from wit import Wit
 
 @app.route("/")
