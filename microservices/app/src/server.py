@@ -7,7 +7,13 @@ def home():
     return "Hasura Hello World"
 
 @app.route('/wit')
-def testWit():
-	client = Wit("FRGHIG2TZ2VGOBJE6OSARPM465EWGBEH")
-	resp = client.message("How far is tokyo from bangalore?")
-	return jsonify(resp['entities'])
+def getWit():
+	return render_template('form.html')
+	
+@app.route('/wit' , methods = ['POST'])
+def returnWit():
+	if request.method == 'POST':
+		query = request.form['comment']
+		client = Wit("FRGHIG2TZ2VGOBJE6OSARPM465EWGBEH")
+		resp = client.message(query)
+		return jsonify(resp['entities'])
