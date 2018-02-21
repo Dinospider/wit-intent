@@ -1,4 +1,5 @@
-description: Categorizes user input into four intents - weather, distance travelled, location, and time taken.
+description: Categorizes user input into four intents - weather, distance travelled,
+  location, and time taken.
 keywords: wit, categorize-intent
 media: {}
 name: wit-intent
