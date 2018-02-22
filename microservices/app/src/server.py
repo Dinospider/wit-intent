@@ -13,7 +13,7 @@ def getWit():
 @app.route('/wit' , methods = ['POST'])
 def returnWit():
 	if request.method == 'POST':
-		accesstoken = "FRGHIG2TZ2VGOBJE6OSARPM465EWGBEH"
+		accesstoken = "FRGHIG2TZ2VGOBJE6OSARPM465EWGBEH" #Change to run your own wit application
 		query = request.form['comment']
 		client = Wit(accesstoken)
 		resp = client.message(query)
